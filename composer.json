@@ -10,6 +10,7 @@
         "nette/caching": "^3.0.0",
         "nette/http": "^3.0.0",
         "nette/utils": "^3.1.0",
+        "dibi/dibi": "^4.1.0",
         "defuse/php-encryption": "^2.2.1"
     },
     "autoload": {
