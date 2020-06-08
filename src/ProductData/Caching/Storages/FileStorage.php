@@ -53,7 +53,7 @@ class FileStorage implements Storage
 	 * @param  string key
 	 * @return string|NULL
 	 */
-	public function read($key)
+	public function read(string $key)
 	{
 		$file = $this->getFile($key);
 
@@ -69,7 +69,7 @@ class FileStorage implements Storage
 	 * @param  string key
 	 * @return void
 	 */
-	public function lock($key)
+	public function lock(string $key): void
 	{
 		// TODO: Implement lock() method.
 	}
@@ -81,7 +81,7 @@ class FileStorage implements Storage
 	 * @param  array  $dependencies
 	 * @return void
 	 */
-	public function write($key, $data, array $dependencies)
+	public function write(string $key, $data, array $dependencies): void
 	{
 		if ($dependencies) {
 			trigger_error("Dependencies are note supported in this file storage", E_USER_NOTICE);
@@ -98,7 +98,7 @@ class FileStorage implements Storage
 	 * @param  string key
 	 * @return void
 	 */
-	public function remove($key)
+	public function remove(string $key): void
 	{
 		$file = $this->getFile($key);
 
@@ -112,7 +112,7 @@ class FileStorage implements Storage
 	 * @param  array $conditions
 	 * @return void
 	 */
-	public function clean(array $conditions)
+	public function clean(array $conditions): void
 	{
 		if ($conditions) {
 			trigger_error("Conditions are note supported in this file storage", E_USER_NOTICE);
