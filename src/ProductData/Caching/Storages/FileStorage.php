@@ -2,12 +2,12 @@
 namespace ProductData\Caching\Storages;
 
 use Nette\InvalidArgumentException;
-use Nette\Caching\IStorage;
+use Nette\Caching\Storage;
 use Nette\SmartObject;
 use Nette\Utils\FileSystem;
 use Nette\Utils\Finder;
 
-class FileStorage implements IStorage
+class FileStorage implements Storage
 {
     use SmartObject;
 
