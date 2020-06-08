@@ -7,9 +7,11 @@ use Nette\SmartObject;
 use Nette\Utils\FileSystem;
 use Nette\Utils\Finder;
 
-class FileStorage extends SmartObject implements IStorage
+class FileStorage implements IStorage
 {
-	/**
+    use SmartObject;
+
+    /**
 	 * @var \SplFileInfo
 	 */
 	private $dir;
